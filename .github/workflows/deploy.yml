@@ -15,6 +15,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Pages serves static assets with max-age=14400 and ignores any
+      # Cache-Control set in _headers, so a returning visitor keeps a stale
+      # stylesheet for four hours after a deploy. Stamping the commit SHA
+      # onto local asset URLs makes each deploy a new URL. Runner-only —
+      # the repo itself stays free of build steps.
+      - name: Stamp asset URLs with the commit SHA
+        run: |
+          SHA="${GITHUB_SHA::8}"
+          find . -name '*.html' -not -path './.git/*' -print0 | xargs -0 sed -i \
+            -e "s|\(href=\"/[^\"]*\.[a-zA-Z0-9]*\)\"|\1?v=$SHA\"|g" \
+            -e "s|\(src=\"/[^\"]*\.[a-zA-Z0-9]*\)\"|\1?v=$SHA\"|g"
+          echo "--- stamped ---"
+          grep -ho '\(href\|src\)="/[^"]*?v=[^"]*"' ./*.html | sort -u
+
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
