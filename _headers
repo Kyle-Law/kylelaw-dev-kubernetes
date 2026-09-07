@@ -2,3 +2,13 @@
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+# Pages defaults these to max-age=14400, so a returning visitor's browser
+# would hold a stale stylesheet or script for four hours after a deploy.
+# There is no build step to hash filenames, so revalidate instead — the
+# files are small and an ETag 304 costs almost nothing.
+/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.js
+  Cache-Control: public, max-age=0, must-revalidate
