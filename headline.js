@@ -5,12 +5,11 @@
   "use strict";
 
   var PHRASES = [
-    ["for ",  "Free",            ""],
-    ["with ", "Active Learning", ""],
-    ["with ", "Visualization",   ""],
-    ["with ", "Live Q&A",        ""],
-    ["with ", "Weekly",          " meeting"],
-    ["with ", "Kyle",            ""]
+    ["for ",  "Free",          ""],
+    ["with ", "Hands-on Labs", ""],
+    ["with ", "Live Q&A",      ""],
+    ["with ", "Weekly",        " meeting"],
+    ["with ", "Kyle",          ""]
   ];
 
   var HOLD = 2600;
