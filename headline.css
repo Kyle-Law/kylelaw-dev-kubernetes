@@ -1,0 +1,87 @@
+/* Rotating hero headline. Scoped to this site so style.css stays
+   byte-identical across the three kylelaw.dev repos. */
+
+:root {
+  --accent: #2f6f5e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { --accent: #6cc0a6; }
+}
+
+.hero-title {
+  font-size: clamp(1.6rem, 5.2vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  line-height: 1.25;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.32em;
+}
+
+/* The mask. Vertical overflow is clipped so words slide in and out of
+   view; padding-bottom keeps the underline from being sheared off. */
+.rot {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-bottom: 0.2em;
+  color: var(--accent);
+  transition: width 420ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.rot .word {
+  display: inline-block;
+  white-space: nowrap;
+  transition: transform 460ms cubic-bezier(.22, 1, .36, 1), opacity 300ms ease;
+}
+
+.rot .word:not(.is-current) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.rot .word.enter { transform: translateY(0);       opacity: 1; }
+.rot .word.from  { transform: translateY(0.95em);  opacity: 0; }
+.rot .word.exit  { transform: translateY(-0.95em); opacity: 0; }
+
+/* Draw-in underline: sweeps left to right once the word has landed. */
+.rot .kw {
+  position: relative;
+  display: inline-block;
+}
+
+.rot .kw::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.16em;
+  height: 0.055em;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 520ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.rot .word.enter .kw::after { transform: scaleX(1); transition-delay: 240ms; }
+.rot .word.exit  .kw::after { transition-duration: 150ms; }
+
+/* Without JS the first phrase is already in the markup and simply sits
+   there, underline drawn. */
+.no-js .rot .kw::after { transform: scaleX(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .rot,
+  .rot .word,
+  .rot .kw::after {
+    transition-duration: 1ms !important;
+    transition-delay: 0ms !important;
+  }
+}
