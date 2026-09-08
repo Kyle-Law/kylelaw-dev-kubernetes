@@ -321,3 +321,209 @@ footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* ---- weekly meeting ---- */
+
+.weekly { padding-top: 4.5rem; }
+
+.weekly-intro {
+  color: var(--muted);
+  max-width: 36rem;
+  margin: 0 0 1.75rem;
+}
+
+.spot-card {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 1.75rem 2rem;
+  max-width: 40rem;
+}
+
+.spot-kicker {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.spot-title {
+  font-family: var(--display);
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0.5rem 0 0.9rem;
+  line-height: 1.3;
+}
+
+.spot-meta {
+  margin: 1.1rem 0 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.tbc {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+}
+
+.upnext { max-width: 40rem; margin-top: 1.75rem; }
+
+.upnext-h {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 0.25rem;
+}
+
+.up-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.9375rem;
+}
+
+.up-n {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  padding-top: 0.15rem;
+}
+
+.see-plan {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.see-plan:hover { text-decoration: underline; }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: var(--muted);
+  background: var(--ground);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+}
+
+.chip:hover { border-color: var(--accent); color: var(--ink); }
+
+.chip .st {
+  font-family: var(--display);
+  font-size: 0.625rem;
+  color: var(--muted);
+}
+
+/* ---- curriculum page ---- */
+
+.crumb {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 2.25rem 0 1.5rem;
+}
+
+.crumb a { color: var(--muted); }
+.crumb a:hover { color: var(--accent); }
+
+.page-title {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.9rem;
+}
+
+.curriculum-lede { max-width: 42rem; margin-bottom: 3rem; }
+
+.syllabus { display: flex; flex-direction: column; }
+
+.phase {
+  margin: 2.5rem 0 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.phase:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+
+.phase-name {
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+}
+
+.phase-blurb {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  max-width: 40rem;
+  margin: 0;
+}
+
+.syl-row {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.syl-wk {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.2rem;
+}
+
+.syl-title { font-weight: 500; font-size: 1.0625rem; }
+
+.kiamol-track {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  max-width: 40rem;
+}
+
+.curriculum-back {
+  margin-top: 3rem;
+  font-family: var(--display);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 40rem) {
+  .syl-row { grid-template-columns: 1fr; gap: 0.35rem; }
+}

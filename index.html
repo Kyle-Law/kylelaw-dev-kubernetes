@@ -34,6 +34,33 @@
     </div>
   </div>
 
+  <!-- WEEKLY:START -->
+  <section class="weekly" id="weekly">
+    <h2>Weekly Meeting</h2>
+    <p class="weekly-intro">A live session every week, working through Kubernetes topic by topic. No fixed end — once we reach the last topic, we start over from the top with whatever has changed by then.</p>
+
+    <div class="spot-card" id="week-spotlight">
+      <span class="spot-kicker">This week</span>
+      <h3 class="spot-title">Volumes &amp; persistent storage</h3>
+      <div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/volumes-basics">Kubernetes Volumes 1: Ephemeral &amp; Persistent Storage<span class="st">5</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/volumes-dynamic">Kubernetes Volumes 2: Dynamic Provisioning, ConfigMaps &amp; Secrets<span class="st">6</span></a></div>
+      <p class="spot-meta">Live walkthrough, then we work the labs together. <span class="tbc">day &amp; time TBC</span></p>
+    </div>
+
+    <div class="upnext">
+      <h4 class="upnext-h">Up next</h4>
+      <div id="week-upnext">
+          <div class="up-row"><span class="up-t">Deployments, rollouts &amp; scheduling</span><span class="up-n">2 labs</span></div>
+          <div class="up-row"><span class="up-t">Probes, and what each one does</span><span class="up-n">2 labs</span></div>
+          <div class="up-row"><span class="up-t">Services, Ingress &amp; Gateway API</span><span class="up-n">3 labs</span></div>
+      </div>
+    </div>
+
+    <a class="see-plan" href="/plan/">See the full curriculum &rarr;</a>
+  </section>
+
+  <script type="application/json" id="weekly-plan-data">[{"title":"Volumes & persistent storage","labs":[{"leaf":"volumes-basics","title":"Kubernetes Volumes 1: Ephemeral & Persistent Storage","steps":5},{"leaf":"volumes-dynamic","title":"Kubernetes Volumes 2: Dynamic Provisioning, ConfigMaps & Secrets","steps":6}]},{"title":"Deployments, rollouts & scheduling","labs":[{"leaf":"deployments-and-jobs","title":"Deployments: Rollouts, Rollbacks & CronJobs","steps":3},{"leaf":"scheduling-constraints","title":"Scheduling Constraints: nodeSelector, Taints & Affinity","steps":3}]},{"title":"Probes, and what each one does","labs":[{"leaf":"readiness-and-safe-rollouts","title":"Probes: Readiness Is What Makes a Rollout Safe","steps":4},{"leaf":"restart-remove-or-wait","title":"Probes: Restart, Remove, or Wait","steps":4}]},{"title":"Services, Ingress & Gateway API","labs":[{"leaf":"multi-port-services","title":"Services: Named Ports, Multi-Port & ExternalName","steps":3},{"leaf":"ingress-and-gateway-api","title":"Ingress & the Gateway API","steps":2},{"leaf":"network-traffic-kubernetes","title":"Network Traffic Kubernetes","steps":2}]},{"title":"NetworkPolicy: there is no deny","labs":[{"leaf":"allow-only-and-default-deny","title":"NetworkPolicy: There Is No Deny Rule","steps":4}]},{"title":"Triage: pods, services & DNS","labs":[{"leaf":"pod-failures","title":"Troubleshoot Pod & Container Failures","steps":4},{"leaf":"services-dns","title":"Troubleshoot Services & DNS","steps":3},{"leaf":"resource-monitoring","title":"Troubleshoot Resource Usage","steps":3}]},{"title":"Triage: control plane, nodes, RBAC","labs":[{"leaf":"control-plane","title":"Troubleshoot Control Plane Components","steps":3},{"leaf":"node-level","title":"Troubleshoot Node-Level Failures","steps":3},{"leaf":"rbac-auth","title":"Troubleshoot RBAC & Authorization","steps":3}]},{"title":"etcd & kubeadm maintenance","labs":[{"leaf":"etcd-backup-restore","title":"Back Up & Restore etcd","steps":2},{"leaf":"kubeadm-maintenance","title":"kubeadm Maintenance: RBAC, Certificates & Tokens","steps":3}]},{"title":"Helm: releases & chart versions","labs":[{"leaf":"getting-started","title":"Getting Started with Helm","steps":2},{"leaf":"release-basics","title":"Working with Releases","steps":3},{"leaf":"chart-versions","title":"Finding Chart Versions","steps":2},{"leaf":"inspect-charts","title":"Inspecting Charts","steps":2},{"leaf":"release-details","title":"Inspecting a Release","steps":3}]},{"title":"Helm: values, templates, packaging","labs":[{"leaf":"values-and-overrides","title":"Customising with Values","steps":3},{"leaf":"config-driven-rollouts","title":"Rollouts on Config Change","steps":6},{"leaf":"template-conditionals","title":"Conditional Templates","steps":2},{"leaf":"package-your-app","title":"Packaging Your Own App","steps":4}]},{"title":"Helm: rollbacks & safe deploys","labs":[{"leaf":"revisions-and-rollbacks","title":"Revisions and Rollbacks","steps":3},{"leaf":"safe-deploys","title":"Deploying Safely","steps":3},{"leaf":"helm-failed-upgrades","title":"Helm: Failed Upgrades & Recovery","steps":4},{"leaf":"helm-values-precedence","title":"Helm: Values Files & Precedence","steps":4}]},{"title":"Kustomize: overlays & patches","labs":[{"leaf":"overlays-and-generated-config","title":"Kustomize: Overlays, and the Hash That Restarts Your Pods","steps":4},{"leaf":"patches-that-miss","title":"Kustomize: The Patch That Silently Missed","steps":4},{"leaf":"renames-and-references","title":"Kustomize: The Rename That Breaks Your App","steps":4},{"leaf":"components-and-duplication","title":"Kustomize: Components, and the Overlays You Stop Duplicating","steps":4},{"leaf":"orphans-and-pruning","title":"Kustomize: The Resource You Deleted Is Still Running","steps":4}]},{"title":"Argo CD: sync, drift & self-heal","labs":[{"leaf":"argocd-ui-solar-system","title":"Argo CD: Create an App via the UI","steps":4},{"leaf":"argocd-drift-and-selfheal","title":"Argo CD: Drift Detection & Self-Heal","steps":4},{"leaf":"argocd-history-and-rollback","title":"Argo CD: History & Rollback","steps":4}]},{"title":"Argo CD: Helm & Kustomize sources","labs":[{"leaf":"argocd-helm","title":"Argo CD: Sourcing a Helm Chart","steps":4},{"leaf":"argocd-kustomize","title":"Argo CD: Sourcing a Kustomize Overlay","steps":4},{"leaf":"argocd-sync-waves-and-hooks","title":"Argo CD: Sync Waves & Hooks","steps":4}]},{"title":"Argo CD: your own GitOps loop","labs":[{"leaf":"argocd-gitea-solar-system","title":"Argo CD + Gitea: Your Own Self-Hosted GitOps Loop","steps":4},{"leaf":"argocd-gitea-webhook-autosync","title":"Argo CD + Gitea: Webhooks, Auto-Sync & Auto-Prune","steps":4},{"leaf":"argocd-gitea-kustomize-promotion","title":"Argo CD + Gitea + Kustomize: Promoting Between Environments","steps":4}]},{"title":"App-of-Apps & progressive delivery","labs":[{"leaf":"argocd-app-of-apps","title":"Argo CD: App-of-Apps & ApplicationSet","steps":4},{"leaf":"argocd-declarative-app-of-apps","title":"Argo CD: A Declarative App-of-Apps, Helm All the Way Down","steps":4},{"leaf":"argo-rollouts-canary-and-bluegreen","title":"Argo Rollouts: Canary & Blue-Green","steps":4}]},{"title":"Observability: operator pattern","labs":[{"leaf":"prometheus-operator","title":"Install the Prometheus Operator","steps":4}]},{"title":"Sharing GPUs: scheduling & queueing","labs":[{"leaf":"gpu-scheduling","title":"How Clusters Share Scarce Accelerators","steps":5},{"leaf":"dra-devices","title":"Dynamic Resource Allocation: Devices with Attributes","steps":4},{"leaf":"gang-scheduling","title":"Gang Scheduling with Kueue","steps":4}]},{"title":"LLM inference on Kubernetes","labs":[{"leaf":"inference-sim","title":"Simulating an LLM Inference Server","steps":4},{"leaf":"inference-latency","title":"How LLM Inference Spends Its Time","steps":4},{"leaf":"inference-observability","title":"Observability for LLM Serving","steps":4}]}]</script>
+  <!-- WEEKLY:END -->
+
   <!-- LABS:START -->
   <section class="labs" id="labs">
     <h2>Hands-on Labs</h2>
@@ -571,5 +598,6 @@
 
 </div>
 <script src="/headline.js" defer></script>
+<script src="/weekly-plan.js" defer></script>
 </body>
 </html>

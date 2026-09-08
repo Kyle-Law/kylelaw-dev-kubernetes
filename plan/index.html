@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum — Kubernetes — Kyle Law</title>
+<meta name="description" content="The full weekly Kubernetes curriculum — every topic, grounded in real hands-on labs, with no fixed end.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://kubernetes.kylelaw.dev/plan/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Public+Sans:wght@400;500&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a href="https://kylelaw.dev/">home</a>
+    <a href="https://blog.kylelaw.dev/">blog</a>
+    <a href="https://kubernetes.kylelaw.dev/" aria-current="page">kubernetes</a>
+  </nav>
+
+  <p class="crumb"><a href="/">kubernetes.kylelaw.dev</a> / curriculum</p>
+
+  <h1 class="page-title">The Curriculum</h1>
+  <p class="lede curriculum-lede">Every weekly topic, grounded in the lab catalogue below rather than invented — 55 labs across 4 phases. There is no last week: when the list below runs out, the next session starts again from the top, picking up whatever has changed in Kubernetes since.</p>
+
+  <div class="syllabus">
+    <div class="phase"><h3 class="phase-name">Foundations</h3><p class="phase-blurb">The objects you touch every day, and what actually happens when they fail.</p></div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 1</span>
+      <div><span class="syl-title">Volumes &amp; persistent storage</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/volumes-basics">Kubernetes Volumes 1: Ephemeral &amp; Persistent Storage<span class="st">5</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/volumes-dynamic">Kubernetes Volumes 2: Dynamic Provisioning, ConfigMaps &amp; Secrets<span class="st">6</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 2</span>
+      <div><span class="syl-title">Deployments, rollouts &amp; scheduling</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/deployments-and-jobs">Deployments: Rollouts, Rollbacks &amp; CronJobs<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/scheduling-constraints">Scheduling Constraints: nodeSelector, Taints &amp; Affinity<span class="st">3</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 3</span>
+      <div><span class="syl-title">Probes, and what each one does</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/readiness-and-safe-rollouts">Probes: Readiness Is What Makes a Rollout Safe<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/restart-remove-or-wait">Probes: Restart, Remove, or Wait<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 4</span>
+      <div><span class="syl-title">Services, Ingress &amp; Gateway API</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/multi-port-services">Services: Named Ports, Multi-Port &amp; ExternalName<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/ingress-and-gateway-api">Ingress &amp; the Gateway API<span class="st">2</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/network-traffic-kubernetes">Network Traffic Kubernetes<span class="st">2</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 5</span>
+      <div><span class="syl-title">NetworkPolicy: there is no deny</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/allow-only-and-default-deny">NetworkPolicy: There Is No Deny Rule<span class="st">4</span></a></div></div>
+    </div>
+    <div class="phase"><h3 class="phase-name">Operating a cluster</h3><p class="phase-blurb">Diagnosing a cluster you did not build, and keeping its control plane alive.</p></div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 6</span>
+      <div><span class="syl-title">Triage: pods, services &amp; DNS</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/pod-failures">Troubleshoot Pod &amp; Container Failures<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/services-dns">Troubleshoot Services &amp; DNS<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/resource-monitoring">Troubleshoot Resource Usage<span class="st">3</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 7</span>
+      <div><span class="syl-title">Triage: control plane, nodes, RBAC</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/control-plane">Troubleshoot Control Plane Components<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/node-level">Troubleshoot Node-Level Failures<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/rbac-auth">Troubleshoot RBAC &amp; Authorization<span class="st">3</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 8</span>
+      <div><span class="syl-title">etcd &amp; kubeadm maintenance</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/etcd-backup-restore">Back Up &amp; Restore etcd<span class="st">2</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/kubeadm-maintenance">kubeadm Maintenance: RBAC, Certificates &amp; Tokens<span class="st">3</span></a></div></div>
+    </div>
+    <div class="phase"><h3 class="phase-name">Packaging &amp; delivery</h3><p class="phase-blurb">Getting the same manifests into many environments without hand-editing them.</p></div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 9</span>
+      <div><span class="syl-title">Helm: releases &amp; chart versions</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/getting-started">Getting Started with Helm<span class="st">2</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/release-basics">Working with Releases<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/chart-versions">Finding Chart Versions<span class="st">2</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/inspect-charts">Inspecting Charts<span class="st">2</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/release-details">Inspecting a Release<span class="st">3</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 10</span>
+      <div><span class="syl-title">Helm: values, templates, packaging</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/values-and-overrides">Customising with Values<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/config-driven-rollouts">Rollouts on Config Change<span class="st">6</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/template-conditionals">Conditional Templates<span class="st">2</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/package-your-app">Packaging Your Own App<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 11</span>
+      <div><span class="syl-title">Helm: rollbacks &amp; safe deploys</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/revisions-and-rollbacks">Revisions and Rollbacks<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/safe-deploys">Deploying Safely<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/helm-failed-upgrades">Helm: Failed Upgrades &amp; Recovery<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/helm-values-precedence">Helm: Values Files &amp; Precedence<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 12</span>
+      <div><span class="syl-title">Kustomize: overlays &amp; patches</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/overlays-and-generated-config">Kustomize: Overlays, and the Hash That Restarts Your Pods<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/patches-that-miss">Kustomize: The Patch That Silently Missed<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/renames-and-references">Kustomize: The Rename That Breaks Your App<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/components-and-duplication">Kustomize: Components, and the Overlays You Stop Duplicating<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/orphans-and-pruning">Kustomize: The Resource You Deleted Is Still Running<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 13</span>
+      <div><span class="syl-title">Argo CD: sync, drift &amp; self-heal</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-ui-solar-system">Argo CD: Create an App via the UI<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-drift-and-selfheal">Argo CD: Drift Detection &amp; Self-Heal<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-history-and-rollback">Argo CD: History &amp; Rollback<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 14</span>
+      <div><span class="syl-title">Argo CD: Helm &amp; Kustomize sources</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-helm">Argo CD: Sourcing a Helm Chart<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-kustomize">Argo CD: Sourcing a Kustomize Overlay<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-sync-waves-and-hooks">Argo CD: Sync Waves &amp; Hooks<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 15</span>
+      <div><span class="syl-title">Argo CD: your own GitOps loop</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-gitea-solar-system">Argo CD + Gitea: Your Own Self-Hosted GitOps Loop<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-gitea-webhook-autosync">Argo CD + Gitea: Webhooks, Auto-Sync &amp; Auto-Prune<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-gitea-kustomize-promotion">Argo CD + Gitea + Kustomize: Promoting Between Environments<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 16</span>
+      <div><span class="syl-title">App-of-Apps &amp; progressive delivery</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-app-of-apps">Argo CD: App-of-Apps &amp; ApplicationSet<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/argocd-declarative-app-of-apps">Argo CD: A Declarative App-of-Apps, Helm All the Way Down<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/argo-rollouts-canary-and-bluegreen">Argo Rollouts: Canary &amp; Blue-Green<span class="st">4</span></a></div></div>
+    </div>
+    <div class="phase"><h3 class="phase-name">Scale &amp; specialisation</h3><p class="phase-blurb">Watching a cluster properly, and sharing scarce accelerators.</p></div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 17</span>
+      <div><span class="syl-title">Observability: operator pattern</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/prometheus-operator">Install the Prometheus Operator<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 18</span>
+      <div><span class="syl-title">Sharing GPUs: scheduling &amp; queueing</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/gpu-scheduling">How Clusters Share Scarce Accelerators<span class="st">5</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/dra-devices">Dynamic Resource Allocation: Devices with Attributes<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/gang-scheduling">Gang Scheduling with Kueue<span class="st">4</span></a></div></div>
+    </div>
+    <div class="syl-row">
+      <span class="syl-wk">Week 19</span>
+      <div><span class="syl-title">LLM inference on Kubernetes</span><div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/inference-sim">Simulating an LLM Inference Server<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/inference-latency">How LLM Inference Spends Its Time<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/inference-observability">Observability for LLM Serving<span class="st">4</span></a></div></div>
+    </div>
+  </div>
+
+  <div class="kiamol-track">
+    <h3 class="phase-name">Also running alongside</h3>
+    <p class="phase-blurb">10 labs following <em>Learn Kubernetes in a Month of Lunches</em>, one per day, for whoever wants to go deeper between sessions — not part of the weekly rotation above.</p>
+    <div class="chips"><a class="chip" href="https://killercoda.com/kylelaw/scenario/day05-volume-lifecycle-and-safety">Kiamol Day 5: Volume Lifecycle &amp; HostPath Safety<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day06-controllers-and-ownership">Kiamol Day 6: Controllers &amp; Object Ownership<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day06.2-daemonsets">Day 6.2: DaemonSets<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day07-multicontainer-pods">Kiamol Day 7: Multicontainer Pods<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day08-statefulsets">Kiamol Day 8: StatefulSets<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day08.2-statefulsets">Day 8.2: StatefulSets<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day08.3-jobs">Day 8.3: Jobs &amp; CronJobs<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day09-rollouts-rollbacks">Day 9: Rollouts &amp; Rollbacks<span class="st">4</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day09.2-rollout-tuning">Day 9.2: Rollout Tuning &amp; Canary Releases<span class="st">3</span></a><a class="chip" href="https://killercoda.com/kylelaw/scenario/day10-helm">Day 10: Helm<span class="st">4</span></a></div>
+  </div>
+
+  <p class="curriculum-back"><a href="/">&larr; Back to kubernetes.kylelaw.dev</a></p>
+
+  <footer>kubernetes.kylelaw.dev</footer>
+
+</div>
+</body>
+</html>
