@@ -34,10 +34,538 @@
     </div>
   </div>
 
-  <div class="prose">
-    <h2>Notes</h2>
-    <p class="lede">Nothing here yet.</p>
-  </div>
+  <!-- LABS:START -->
+  <section class="labs" id="labs">
+    <h2>Hands-on Labs</h2>
+    <p class="labs-intro">65 browser-based scenarios on Killercoda. Every one runs a real cluster, with no setup and nothing to install — free, at <a href="https://killercoda.com/kylelaw">killercoda.com/kylelaw</a>.</p>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Storage<span class="lab-count">2</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/volumes-basics">
+            <span class="lab-title">Kubernetes Volumes 1: Ephemeral &amp; Persistent Storage</span>
+            <span class="lab-steps">5 steps</span>
+            <span class="lab-desc">Exam-style practice with emptyDir, hostPath, and manually provisioned PersistentVolumes</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/volumes-dynamic">
+            <span class="lab-title">Kubernetes Volumes 2: Dynamic Provisioning, ConfigMaps &amp; Secrets</span>
+            <span class="lab-steps">6 steps</span>
+            <span class="lab-desc">Exam-style practice with StorageClass dynamic provisioning and mounting ConfigMap/Secret data as files</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Workloads<span class="lab-count">2</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/deployments-and-jobs">
+            <span class="lab-title">Deployments: Rollouts, Rollbacks &amp; CronJobs</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Perform a rolling update, roll back a stuck rollout, and create a CronJob</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/scheduling-constraints">
+            <span class="lab-title">Scheduling Constraints: nodeSelector, Taints &amp; Affinity</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Diagnose Pods stuck Pending due to nodeSelector, a node taint, and pod anti-affinity</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Probes<span class="lab-count">2</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/readiness-and-safe-rollouts">
+            <span class="lab-title">Probes: Readiness Is What Makes a Rollout Safe</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">A rolling update with no readiness probe will report success while serving nothing — build up the four settings that turn a bad deploy into a contained, non-zero-exit failure</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/restart-remove-or-wait">
+            <span class="lab-title">Probes: Restart, Remove, or Wait</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Liveness restarts, readiness removes from traffic, startup buys time — three probes with three different powers, and the outages you get from confusing them</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Networking<span class="lab-count">3</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/network-traffic-kubernetes">
+            <span class="lab-title">Network Traffic Kubernetes</span>
+            <span class="lab-steps">2 steps</span>
+            <span class="lab-desc">Access services running inside a Kubernetes environment</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/ingress-and-gateway-api">
+            <span class="lab-title">Ingress &amp; the Gateway API</span>
+            <span class="lab-steps">2 steps</span>
+            <span class="lab-desc">Route HTTP traffic with a classic Ingress resource, then model the same intent with Gateway API</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/multi-port-services">
+            <span class="lab-title">Services: Named Ports, Multi-Port &amp; ExternalName</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Target a container port by name, expose multiple named ports on one Service, and create an ExternalName Service</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Network Policy<span class="lab-count">1</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/allow-only-and-default-deny">
+            <span class="lab-title">NetworkPolicy: There Is No Deny Rule</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Policies only ever allow — but selecting a Pod flips it to deny-by-default. Build a least-privilege three-tier namespace and watch a connectivity matrix close, one policy at a time</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Troubleshooting<span class="lab-count">6</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/control-plane">
+            <span class="lab-title">Troubleshoot Control Plane Components</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Diagnose and repair broken kube-scheduler, kube-controller-manager, and kube-apiserver static Pods</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/node-level">
+            <span class="lab-title">Troubleshoot Node-Level Failures</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Diagnose a cordoned node, a stopped kubelet, and a broken kubelet-to-apiserver credential</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/pod-failures">
+            <span class="lab-title">Troubleshoot Pod &amp; Container Failures</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Diagnose and fix CrashLoopBackOff, ImagePullBackOff, OOMKilled, and failing readiness probes</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/rbac-auth">
+            <span class="lab-title">Troubleshoot RBAC &amp; Authorization</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Diagnose Forbidden errors from a missing RoleBinding, an incomplete Role, and a namespace-scoped binding to a cluster-scoped resource</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/resource-monitoring">
+            <span class="lab-title">Troubleshoot Resource Usage</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Use kubectl top to identify heavy Pods, diagnose a ResourceQuota blocking scheduling, and relieve node memory pressure</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/services-dns">
+            <span class="lab-title">Troubleshoot Services &amp; DNS</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Diagnose and fix a Service selector mismatch, a wrong targetPort, and a broken CoreDNS deployment</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Cluster Admin<span class="lab-count">2</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/etcd-backup-restore">
+            <span class="lab-title">Back Up &amp; Restore etcd</span>
+            <span class="lab-steps">2 steps</span>
+            <span class="lab-desc">Take a full etcd snapshot, then restore from it after simulated data loss</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/kubeadm-maintenance">
+            <span class="lab-title">kubeadm Maintenance: RBAC, Certificates &amp; Tokens</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Grant a real User RBAC access, renew a control-plane certificate, and create a bootstrap token</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Helm<span class="lab-count">11</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/getting-started">
+            <span class="lab-title">Getting Started with Helm</span>
+            <span class="lab-steps">2 steps</span>
+            <span class="lab-desc">How to install Helm and make first contact</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/release-basics">
+            <span class="lab-title">Working with Releases</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">List, install and delete Helm releases</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/chart-versions">
+            <span class="lab-title">Finding Chart Versions</span>
+            <span class="lab-steps">2 steps</span>
+            <span class="lab-desc">How to search for and install a specific version of a chart</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/inspect-charts">
+            <span class="lab-title">Inspecting Charts</span>
+            <span class="lab-steps">2 steps</span>
+            <span class="lab-desc">How to download and inspect charts</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/release-details">
+            <span class="lab-title">Inspecting a Release</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">How to get details of installed releases</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/revisions-and-rollbacks">
+            <span class="lab-title">Revisions and Rollbacks</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">How to inspect previous revisions and roll back to one</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/safe-deploys">
+            <span class="lab-title">Deploying Safely</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Options and precautions for running Helm against a real cluster</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/values-and-overrides">
+            <span class="lab-title">Customising with Values</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Override and modify values in a Helm chart</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/config-driven-rollouts">
+            <span class="lab-title">Rollouts on Config Change</span>
+            <span class="lab-steps">6 steps</span>
+            <span class="lab-desc">Automatically roll out a Deployment when its ConfigMap changes</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/template-conditionals">
+            <span class="lab-title">Conditional Templates</span>
+            <span class="lab-steps">2 steps</span>
+            <span class="lab-desc">Incorporate conditions into your Helm chart templates</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/package-your-app">
+            <span class="lab-title">Packaging Your Own App</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Take a plain index.html to a Helm chart that deploys per environment behind a NodePort</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Helm, Further In<span class="lab-count">2</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/helm-failed-upgrades">
+            <span class="lab-title">Helm: Failed Upgrades &amp; Recovery</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">What &#x27;deployed&#x27; actually means, --wait vs --atomic, and bringing a release back from the dead with --keep-history</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/helm-values-precedence">
+            <span class="lab-title">Helm: Values Files &amp; Precedence</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Trimmed override files, layering -f and --set, get values vs get values -a, and the special-syntax flags: --set-file, --set-string, list indices</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Kustomize<span class="lab-count">5</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/components-and-duplication">
+            <span class="lab-title">Kustomize: Components, and the Overlays You Stop Duplicating</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Optional features multiply overlays until every change is a find-and-replace — extract them into Components, then learn the ordering rule nobody warns you about</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/orphans-and-pruning">
+            <span class="lab-title">Kustomize: The Resource You Deleted Is Still Running</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Removing a resource from a kustomization does not remove it from the cluster — how orphans accumulate invisibly, how to find them, and why --prune&#x27;s label selector is a blast radius</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/overlays-and-generated-config">
+            <span class="lab-title">Kustomize: Overlays, and the Hash That Restarts Your Pods</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">One base, many overlays, no templating — then configMapGenerator&#x27;s name hash, and why editing a ConfigMap in place leaves your Pods silently running the old value</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/patches-that-miss">
+            <span class="lab-title">Kustomize: The Patch That Silently Missed</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Strategic merge matches list items by key and adds a new one when the key is wrong — the difference between a forgiving patch and a strict one, and when to reach for JSON 6902</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/renames-and-references">
+            <span class="lab-title">Kustomize: The Rename That Breaks Your App</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">namePrefix rewrites the references it understands and silently leaves the rest — why your Service moved, your app didn&#x27;t follow, and why vars won&#x27;t save you</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">GitOps<span class="lab-count">12</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argo-rollouts-canary-and-bluegreen">
+            <span class="lab-title">Argo Rollouts: Canary &amp; Blue-Green</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Weighted canary steps, indefinite vs timed pauses, abort vs promote, and blue-green&#x27;s instant full cutover instead of a gradual shift</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-app-of-apps">
+            <span class="lab-title">Argo CD: App-of-Apps &amp; ApplicationSet</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">One Application managing many, cascading deletion through a finalizer, and ApplicationSet&#x27;s list vs git-directory generators</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-declarative-app-of-apps">
+            <span class="lab-title">Argo CD: A Declarative App-of-Apps, Helm All the Way Down</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">One hand-written, kubectl-applied parent Application whose children are themselves real Helm-chart deployments, one per environment, values and all</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-drift-and-selfheal">
+            <span class="lab-title">Argo CD: Drift Detection &amp; Self-Heal</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Sync vs Health as independent axes, why automated sync alone doesn&#x27;t catch live drift, and how selfHeal closes that gap</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-gitea-kustomize-promotion">
+            <span class="lab-title">Argo CD + Gitea + Kustomize: Promoting Between Environments</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Two Applications, one repo, two overlay paths — promotion becomes a commit, and a shared base becomes a change to every environment at once</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-gitea-solar-system">
+            <span class="lab-title">Argo CD + Gitea: Your Own Self-Hosted GitOps Loop</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Argo CD and a self-hosted Gitea, both reachable via NodePort, sourcing a real Application from a repo you create and push to yourself</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-gitea-webhook-autosync">
+            <span class="lab-title">Argo CD + Gitea: Webhooks, Auto-Sync &amp; Auto-Prune</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Replace Argo CD&#x27;s polling with a real Gitea webhook, then let automated sync — self-heal and prune included — do the rest without a human ever clicking Sync</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-helm">
+            <span class="lab-title">Argo CD: Sourcing a Helm Chart</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Argo CD templates a Helm chart and applies the output directly — no Helm release ever exists. --helm-set, --values-literal-file, and --values, and when each one actually works</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-history-and-rollback">
+            <span class="lab-title">Argo CD: History &amp; Rollback</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">argocd app history vs argocd app rollback, why a rollback doesn&#x27;t stick the way helm rollback does, and how to make it stick</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-kustomize">
+            <span class="lab-title">Argo CD: Sourcing a Kustomize Overlay</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">CLI-driven Kustomize overrides, why --nameprefix orphans instead of renaming, and the common-label override that breaks a sync outright</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-sync-waves-and-hooks">
+            <span class="lab-title">Argo CD: Sync Waves &amp; Hooks</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Ordering a sync with wave numbers, PreSync/Sync/PostSync hooks, and why hook-delete-policy matters more than it looks</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/argocd-ui-solar-system">
+            <span class="lab-title">Argo CD: Create an App via the UI</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Full Argo CD with its UI exposed via NodePort on a multi-node cluster; create, view, and reason about a real app through the browser instead of the CLI</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Observability<span class="lab-count">1</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/prometheus-operator">
+            <span class="lab-title">Install the Prometheus Operator</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Install an operator and its CRDs, grant it RBAC, deploy Prometheus via a custom resource, and scrape a workload with a ServiceMonitor</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">AI Workloads<span class="lab-count">6</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/dra-devices">
+            <span class="lab-title">Dynamic Resource Allocation: Devices with Attributes</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Replace the opaque GPU counter with structured devices you can select by attribute and share between Pods</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/gang-scheduling">
+            <span class="lab-title">Gang Scheduling with Kueue</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Fix the deadlock the default scheduler creates: queue GPU jobs so each is admitted whole or not at all</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/gpu-scheduling">
+            <span class="lab-title">How Clusters Share Scarce Accelerators</span>
+            <span class="lab-steps">5 steps</span>
+            <span class="lab-desc">Advertise GPUs on a node that has none, then learn accelerator scarcity, quota, preemption and gang deadlock exactly as a real GPU cluster behaves</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/inference-latency">
+            <span class="lab-title">How LLM Inference Spends Its Time</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Measure prefill and decode separately, isolate each phase, and predict a request&#x27;s latency from the cost model</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/inference-observability">
+            <span class="lab-title">Observability for LLM Serving</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Scrape vLLM metrics with Prometheus, check p95 latency against known ground truth, watch queue depth saturate, and test an alert without generating load</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/inference-sim">
+            <span class="lab-title">Simulating an LLM Inference Server</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Run a GPU-free, OpenAI-compatible vLLM simulator on Kubernetes: deploy it, configure it, probe it, break it, and scrape its metrics</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="lab-group">
+      <h3 class="lab-group-title">Kiamol: A Month of Lunches<span class="lab-count">10</span></h3>
+      <ul class="lab-list">
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day05-volume-lifecycle-and-safety">
+            <span class="lab-title">Kiamol Day 5: Volume Lifecycle &amp; HostPath Safety</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">See why a container restart loses unmounted data, restrict a hostPath with subPath, and fix an unrestricted hostPath mount</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day06-controllers-and-ownership">
+            <span class="lab-title">Kiamol Day 6: Controllers &amp; Object Ownership</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Scale a bare ReplicaSet, see how Deployments manage ReplicaSet churn, and orphan/re-adopt a DaemonSet&#x27;s Pod</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day06.2-daemonsets">
+            <span class="lab-title">Day 6.2: DaemonSets</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Write a DaemonSet without a generator, tolerate a tainted node, scope with nodeSelector, and control rollouts with OnDelete</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day07-multicontainer-pods">
+            <span class="lab-title">Kiamol Day 7: Multicontainer Pods</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Shared volumes with different access levels, init container ordering, and the sidecar pattern for log adaptation</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day08-statefulsets">
+            <span class="lab-title">Kiamol Day 8: StatefulSets</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Predictable Pod identity, headless Service DNS, and per-replica storage with volumeClaimTemplates</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day08.2-statefulsets">
+            <span class="lab-title">Day 8.2: StatefulSets</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Ordered creation gated on readiness, PVCs surviving scale-down, partitioned rolling updates, and the immutability wall</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day08.3-jobs">
+            <span class="lab-title">Day 8.3: Jobs &amp; CronJobs</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Fix a Job stuck in backoff, run completions in parallel waves, cap a runaway Job, and control a CronJob without deleting it</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day09-rollouts-rollbacks">
+            <span class="lab-title">Day 9: Rollouts &amp; Rollbacks</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">Roll back to a specific revision, pick the right update strategy, batch changes with pause/resume, and release blue/green</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day09.2-rollout-tuning">
+            <span class="lab-title">Day 9.2: Rollout Tuning &amp; Canary Releases</span>
+            <span class="lab-steps">3 steps</span>
+            <span class="lab-desc">Detect a stalled rollout with progressDeadlineSeconds, run a percentage canary by replica ratio, and control rollback history with revisionHistoryLimit</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://killercoda.com/kylelaw/scenario/day10-helm">
+            <span class="lab-title">Day 10: Helm</span>
+            <span class="lab-steps">4 steps</span>
+            <span class="lab-desc">The repo workflow with a version-pinned install, values overrides, release history and rollback, and a local chart from scratch</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- LABS:END -->
+
 
   <footer>kubernetes.kylelaw.dev</footer>
 

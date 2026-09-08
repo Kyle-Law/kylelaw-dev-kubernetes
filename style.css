@@ -238,3 +238,86 @@ footer {
     transition-delay: 0ms !important;
   }
 }
+
+/* ---- hands-on labs ---- */
+
+.labs { padding-top: 4rem; }
+
+.labs-intro {
+  color: var(--muted);
+  max-width: 36rem;
+  margin: 0 0 1rem;
+}
+
+.lab-group { margin-top: 2.75rem; }
+
+.lab-group-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  font-family: var(--display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 0.25rem;
+}
+
+.lab-count {
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+}
+
+.lab-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
+  gap: 0 2.5rem;
+}
+
+.lab-list li { border-top: 1px solid var(--line); }
+
+.lab-list a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.15rem 1rem;
+  padding: 0.95rem 0;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.lab-list a:hover .lab-title { color: var(--accent); }
+
+.lab-title {
+  font-weight: 500;
+  line-height: 1.35;
+  font-size: 0.9375rem;
+}
+
+.lab-steps {
+  font-family: var(--display);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  padding-top: 0.2rem;
+}
+
+.lab-desc {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
